@@ -1,33 +1,53 @@
+/* --- Global & Reset --- */
 body {
     background-color: #FFD4E3;
     font-family: "DM Sans", sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevents side-scrolling on mobile */
 }
 
-li {
+h1, h2, h3, p, ul, li {
+    margin: 0;
     padding: 0;
 }
 
-h1, h2, p {
-    margin: 0;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-h2 {
-    margin-bottom: 16px;
+/* --- Layout Containers --- */
+.section-padding {
+    padding: 48px 100px;
 }
 
-nav ul li a {
+.bg-light-pink {
+    background-color: #FFEDED;
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 22px 100px; 
+    box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.8);
+    background-color: #FFD4E3;
+}
+
+.nav-links {
+    display: flex; 
+    list-style: none; 
+    gap: 4rem; 
+    font-size: 20px;
+}
+
+nav a, .logo {
     text-decoration: none;
     color: black;
-    padding: 5px 10px;
     transition: all 0.3s ease;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    transition: all 0.3s ease;
+    font-family: 'Questrial', sans-serif;
 }
 
 nav ul li a:hover {
@@ -35,23 +55,60 @@ nav ul li a:hover {
     border-bottom: 2px solid black;
 }
 
-.featured-posts {
-  padding: 80px 100px;
-  background-color: #FFEDED;
+/* --- Hero & Typography --- */
+.hero {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 80vh; 
+    padding: 40px; 
+    text-align: center; 
+    background-size: cover;
+    background-position: center;
+    gap: 48px;
 }
 
-.featured-posts h2 {
-  font-family: 'Questrial', sans-serif;
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 40px;
+.hero h1 {
+    font-family: Questrial, sans-serif; 
+    font-size: clamp(40px, 8vw, 90px); /* Adjusts size based on screen */
 }
 
+.btn-outline {
+    display: inline-flex; 
+    background: none; 
+    border: solid 2px black; 
+    font-size: 20px; 
+    font-weight: 500; 
+    padding: 12px 16px; 
+    align-items: center; 
+    gap: 12px; 
+    border-radius: 4px; 
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+/* --- Picture Grid --- */
+.picture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.picture-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* --- Posts Grid --- */
 .posts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  padding: 24px 0;
+  margin-top: 40px;
 }
 
 .post-card {
@@ -62,324 +119,62 @@ nav ul li a:hover {
   transition: transform 0.3s ease;
 }
 
-.post-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+/* --- Footer & Contact --- */
+.footer-links {
+    display: flex; 
+    list-style: none; 
+    gap: 4rem; 
+    font-size: 16px;
 }
 
-.post-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.post-content {
-  padding: 20px;
-}
-
-.post-tag {
-  display: inline-block;
-  background-color: #FFD4E3;
-  color: black;
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.post-card h3 {
-  font-family: 'Questrial', sans-serif;
-  font-size: 24px;
-  margin: 12px 0;
-}
-
-.post-excerpt {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-.post-meta {
-  display: flex;
-  gap: 16px;
-  font-size: 14px;
-  color: #999;
-  margin-bottom: 16px;
-}
-
-.read-more {
-  color: black;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.read-more:hover {
-  color: #0066cc;
-}
-
-/* ========================================
-   RESPONSIVE DESIGN - MOBILE & TABLET
-   Uses !important to override inline styles
-   ======================================== */
-
-/* Tablet (768px - 1024px) */
-@media (max-width: 1024px) {
-  /* Navigation */
-  header nav {
-    padding: 20px 40px !important;
-  }
-
-  header nav ul {
-    gap: 2rem !important;
-  }
-
-  /* Hero Section */
-  section.hero {
-    padding: 60px 40px !important;
-    height: 60vh !important;
-  }
-
-  section.hero h1 {
-    font-size: 60px !important;
-  }
-
-  /* About Section */
-  section.about-me {
-    padding: 0 40px !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 40px;
-  }
-
-  section.about-me img {
-    max-width: 100%;
-    height: auto !important;
-  }
-
-  section.about-me div {
-    max-width: 100% !important;
-  }
-
-  /* Posts Grid */
-  .posts-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 20px !important;
-  }
-
-  /* General Sections */
-  section {
-    padding: 40px !important;
-  }
-
-  .featured-posts {
-    padding: 60px 40px !important;
-  }
-}
-
-/* Mobile (up to 768px) */
-@media (max-width: 768px) {
-  /* Navigation */
-  header nav {
-    padding: 16px 20px !important;
-    flex-direction: column !important;
-    gap: 16px !important;
-  }
-
-  header nav a {
-    font-size: 18px !important;
-  }
-
-  header nav ul {
-    gap: 1.5rem !important;
-    font-size: 16px !important;
+.social-links {
+    display: flex; 
+    justify-content: center; 
+    list-style: none; 
+    gap: 72px;
     flex-wrap: wrap;
-    justify-content: center !important;
-  }
-
-  /* Hero Section */
-  section.hero {
-    padding: 40px 20px !important;
-    height: auto !important;
-    min-height: 50vh !important;
-    gap: 24px !important;
-  }
-
-  section.hero h1 {
-    font-size: 36px !important;
-    line-height: 1.2 !important;
-  }
-
-  section.hero a,
-  section.hero button {
-    font-size: 16px !important;
-    padding: 10px 14px !important;
-  }
-
-  /* About Section */
-  section.about-me {
-    margin-top: 60px !important;
-    padding: 0 20px !important;
-    flex-direction: column !important;
-    gap: 30px !important;
-  }
-
-  section.about-me h2 {
-    font-size: 32px !important;
-    text-align: center !important;
-  }
-
-  section.about-me img {
-    width: 100% !important;
-    max-width: 400px !important;
-    height: auto !important;
-  }
-
-  .about-text {
-    font-size: 16px !important;
-    line-height: 1.6 !important;
-    text-align: center !important;
-  }
-
-  section.about-me > div {
-    align-items: center !important;
-  }
-
-  /* Picture Grid */
-  .picture-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
-  }
-
-  /* Posts Grid */
-  .posts-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-
-  /* Featured Posts Section */
-  .featured-posts {
-    padding: 40px 20px !important;
-  }
-
-  .featured-posts h2 {
-    font-size: 32px !important;
-  }
-
-  /* All Section Headings */
-  section h1 {
-    font-size: 48px !important;
-  }
-
-  section h2 {
-    font-size: 32px !important;
-  }
-
-  /* General Sections */
-  section {
-    padding: 30px 20px !important;
-    margin: 60px 0 !important;
-  }
-
-  /* Anticipate Section - Image and Text */
-  section > div {
-    flex-direction: column !important;
-    gap: 30px !important;
-    align-items: center !important;
-  }
-
-  section img {
-    height: auto !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-
-  /* Contact Section */
-  section.contact {
-    padding: 40px 20px 16px 20px !important;
-    gap: 30px !important;
-  }
-
-  section.contact p {
-    font-size: 16px !important;
-    line-height: 1.6 !important;
-  }
-
-  section.contact ul {
-    flex-direction: column !important;
-    gap: 16px !important;
-    align-items: center !important;
-  }
-
-  section.contact > div:last-child {
-    flex-direction: column !important;
-    gap: 24px !important;
-    text-align: center !important;
-  }
-
-  section.contact > div:last-child ul {
-    flex-direction: row !important;
-    gap: 1.5rem !important;
-    flex-wrap: wrap !important;
-  }
-
-  section.contact > div:last-child p {
-    font-size: 14px !important;
-  }
-
-  /* Buttons/Links that look like buttons */
-  section a[style*="border"],
-  section button {
-    font-size: 16px !important;
-    padding: 10px 14px !important;
-  }
 }
 
-/* Small Mobile (up to 480px) */
-@media (max-width: 480px) {
-  /* Hero */
-  section.hero h1 {
-    font-size: 28px !important;
-  }
+/* --- Responsive Media Queries --- */
+@media (max-width: 1024px) {
+    .section-padding, nav, .hero {
+        padding: 40px 50px;
+    }
+}
 
-  /* Section Headings */
-  section h1 {
-    font-size: 36px !important;
-  }
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
 
-  section h2 {
-    font-size: 24px !important;
-  }
+    .nav-links {
+        gap: 1.5rem;
+        font-size: 16px;
+    }
 
-  .about-me h2,
-  .featured-posts h2 {
-    font-size: 24px !important;
-  }
+    .section-padding {
+        padding: 40px 20px;
+    }
 
-  /* Navigation */
-  header nav ul {
-    gap: 1rem !important;
-    font-size: 14px !important;
-  }
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-  /* Post Cards */
-  .post-card h3 {
-    font-size: 20px !important;
-  }
+    .posts-grid, .picture-grid {
+        grid-template-columns: 1fr; /* Stacks cards/images vertically */
+    }
 
-  /* Contact */
-  section.contact ul {
-    gap: 12px !important;
-  }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 
-  section.contact > div:last-child ul {
-    gap: 1rem !important;
-    font-size: 14px !important;
-  }
-
-  /* About text */
-  .about-text {
-    font-size: 14px !important;
-  }
+    .social-links {
+        gap: 20px;
+    }
 }
