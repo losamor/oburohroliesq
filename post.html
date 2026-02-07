@@ -282,8 +282,8 @@
         }
 
         // Toggle like
-        async function toggleLike(postSlug) {
-            if (!firebaseInitialized) return;
+       async function toggleLike(postSlug) {
+            if (!firebaseInitialized) return null;
             
             const likeRef = ref(database, 'likes/' + postSlug);
             const userLikedKey = 'liked_' + postSlug;
@@ -291,20 +291,18 @@
             
             try {
                 const result = await runTransaction(likeRef, (currentValue) => {
-                    if (hasLiked) {
-                        return Math.max(0, (currentValue || 0) - 1);
-                    } else {
-                        return (currentValue || 0) + 1;
-                    }
+                    const current = currentValue || 0;
+                    return hasLiked ? Math.max(0, current - 1) : current + 1;
                 });
                 
+                // Get the accurate new count directly from the transaction result
                 const newCount = result.snapshot.val() || 0;
                 localStorage.setItem(userLikedKey, !hasLiked);
+                
                 return { liked: !hasLiked, count: newCount };
             } catch (error) {
                 console.error('Error toggling like:', error);
-                const currentCount = await getLikeCount(postSlug);
-                return { liked: hasLiked, count: currentCount };
+                return null;
             }
         }
 
@@ -362,21 +360,24 @@
         }
 
         // Handle like button click
-        async function handleLikeClick(postSlug, button) {
+       async function handleLikeClick(postSlug, button) {
             button.disabled = true;
             
             const result = await toggleLike(postSlug);
             
-            // Update button appearance
-            if (result.liked) {
-                button.classList.add('liked');
-                button.querySelector('.like-icon').textContent = '❤️';
-            } else {
-                button.classList.remove('liked');
-                button.querySelector('.like-icon').textContent = '🤍';
+            if (result) {
+                // Update appearance based on the result object
+                if (result.liked) {
+                    button.classList.add('liked');
+                    button.querySelector('.like-icon').textContent = '❤️';
+                } else {
+                    button.classList.remove('liked');
+                    button.querySelector('.like-icon').textContent = '🤍';
+                }
+                // Update the count immediately using the result from the transaction
+                button.querySelector('.like-count').textContent = result.count;
             }
             
-            button.querySelector('.like-count').textContent = result.count;
             button.disabled = false;
         }
 
