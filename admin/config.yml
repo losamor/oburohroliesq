@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: losamor/oburohroliesq 
+  name: git-gateway
   branch: main
 
 media_folder: "images"
@@ -20,4 +19,5 @@ collections:
       - { label: "Category", name: "category", widget: "string", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
+
       - { label: "Body", name: "body", widget: "markdown" }
