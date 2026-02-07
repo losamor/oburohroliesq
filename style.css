@@ -589,7 +589,8 @@ a {
     }
 
     .nav-links {
-        gap: 1rem;
+        width: 100%;
+        justify-content: space-between;
         font-size: 14px;
     }
 
@@ -614,3 +615,4 @@ a {
         font-size: 36px;
     }
 }
+
