@@ -175,7 +175,7 @@
     <script>
         async function loadNetlifyPosts() {
             try {
-                const response = await fetch('https://api.github.com/repos/losamor/blogsample/contents/posts');
+                const response = await fetch('https://api.github.com/repos/losamor/oburohroliesq/contents/posts');
                 if (!response.ok) throw new Error('Unable to fetch posts');
                 
                 const files = await response.json();
@@ -253,4 +253,5 @@
     </script>
 </body>
 </html>
+
 
