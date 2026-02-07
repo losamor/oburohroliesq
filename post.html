@@ -193,11 +193,12 @@
                 </p>
             </div>
             <div>
-                <ul style="display: flex; justify-content: center; gap: 24px; list-style: none; padding: 0; margin: 0; gap: 72px;">
-                    <li><a href="https://www.facebook.com/oburoh.roli" target="_blank">Facebook</a></li>
-                    <li><a href="https://www.twitter.com/oburoh_roli" target="_blank">Twitter</a></li>
-                    <li><a href="https://www.linkedin.com/in/oburoh-roli" target="_blank">LinkedIn</a></li>
-                    <li><a href="/cdn-cgi/l/email-protection#046b6671766b6c2a766b686d446369656d682a676b69">Email</a></li>
+                <ul>
+                    <li><a href="https://youtube.com/@rolioburohesq?si=kaZKsWVXUnhFWCAo" target="_blank">YouTube</a></li>
+                    <li><a href="https://x.com/RoliKimOburoh?t=WBztLPQNu8M1DOZpxY1r7Q&s=09" target="_blank">X (formerly Twitter)</a></li>
+                    <li><a href="https://www.instagram.com/tesigiwa?igsh=MTdjc3VhZnd2Z2Y4YQ==" target="_blank">Instagram</a></li>
+                    <li><a href="mailto:oburohroli94@gmail.com">Email</a></li>
+                </ul>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <p style="font-size: 16px;">© 2026 Oburoh Roli ESQ. All rights reserved.</p>
@@ -282,10 +283,7 @@
 
         // Toggle like
         async function toggleLike(postSlug) {
-            if (!firebaseInitialized) {
-                console.error('Firebase not initialized');
-                return { liked: false, count: 0 };
-            }
+            if (!firebaseInitialized) return;
             
             const likeRef = ref(database, 'likes/' + postSlug);
             const userLikedKey = 'liked_' + postSlug;
@@ -301,11 +299,7 @@
                 });
                 
                 const newCount = result.snapshot.val() || 0;
-                
                 localStorage.setItem(userLikedKey, !hasLiked);
-                
-                console.log('Like toggled:', { slug: postSlug, liked: !hasLiked, count: newCount });
-                
                 return { liked: !hasLiked, count: newCount };
             } catch (error) {
                 console.error('Error toggling like:', error);
@@ -371,24 +365,19 @@
         async function handleLikeClick(postSlug, button) {
             button.disabled = true;
             
-            try {
-                const result = await toggleLike(postSlug);
-                
-                // Update button appearance
-                if (result.liked) {
-                    button.classList.add('liked');
-                    button.querySelector('.like-icon').textContent = '❤️';
-                } else {
-                    button.classList.remove('liked');
-                    button.querySelector('.like-icon').textContent = '🤍';
-                }
-                
-                button.querySelector('.like-count').textContent = result.count;
-            } catch (error) {
-                console.error('Error in handleLikeClick:', error);
-            } finally {
-                button.disabled = false;
+            const result = await toggleLike(postSlug);
+            
+            // Update button appearance
+            if (result.liked) {
+                button.classList.add('liked');
+                button.querySelector('.like-icon').textContent = '❤️';
+            } else {
+                button.classList.remove('liked');
+                button.querySelector('.like-icon').textContent = '🤍';
             }
+            
+            button.querySelector('.like-count').textContent = result.count;
+            button.disabled = false;
         }
 
         // Load and display post
@@ -453,7 +442,11 @@
                 const container = document.getElementById('post-container');
                 container.innerHTML = `
                     <a href="blog.html" class="back-link">
-                                 <article>
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        Back to Blog
+                    </a>
+                    
+                    <article>
                         <div class="post-header">
                             <h1 class="post-title">${post.title}</h1>
                             <div class="post-meta">
@@ -501,7 +494,7 @@
             window.netlifyIdentity.on("init", user => {
                 if (!user) {
                     window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
+                              document.location.href = "/admin/";
                     });
                 }
             });
