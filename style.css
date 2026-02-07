@@ -121,53 +121,54 @@ nav ul li a:hover {
 
 /* ========================================
    RESPONSIVE DESIGN - MOBILE & TABLET
+   Uses !important to override inline styles
    ======================================== */
 
 /* Tablet (768px - 1024px) */
 @media (max-width: 1024px) {
   /* Navigation */
-  nav {
+  header nav {
     padding: 20px 40px !important;
   }
 
-  nav ul {
+  header nav ul {
     gap: 2rem !important;
   }
 
   /* Hero Section */
-  .hero {
+  section.hero {
     padding: 60px 40px !important;
     height: 60vh !important;
   }
 
-  .hero h1 {
+  section.hero h1 {
     font-size: 60px !important;
   }
 
   /* About Section */
-  .about-me {
+  section.about-me {
     padding: 0 40px !important;
     flex-direction: column !important;
-    align-items: center;
+    align-items: center !important;
     gap: 40px;
   }
 
-  .about-me img {
+  section.about-me img {
     max-width: 100%;
-    height: auto;
+    height: auto !important;
   }
 
-  .about-me div {
+  section.about-me div {
     max-width: 100% !important;
   }
 
   /* Posts Grid */
   .posts-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
   }
 
-  /* Sections */
+  /* General Sections */
   section {
     padding: 40px !important;
   }
@@ -180,60 +181,69 @@ nav ul li a:hover {
 /* Mobile (up to 768px) */
 @media (max-width: 768px) {
   /* Navigation */
-  nav {
+  header nav {
     padding: 16px 20px !important;
-    flex-direction: column;
-    gap: 16px;
+    flex-direction: column !important;
+    gap: 16px !important;
   }
 
-  nav a[style*="font-size: 20px"] {
+  header nav a {
     font-size: 18px !important;
   }
 
-  nav ul {
+  header nav ul {
     gap: 1.5rem !important;
     font-size: 16px !important;
+    flex-wrap: wrap;
+    justify-content: center !important;
   }
 
   /* Hero Section */
-  .hero {
+  section.hero {
     padding: 40px 20px !important;
     height: auto !important;
-    min-height: 60vh;
+    min-height: 50vh !important;
+    gap: 24px !important;
   }
 
-  .hero h1 {
+  section.hero h1 {
     font-size: 36px !important;
     line-height: 1.2 !important;
   }
 
-  .hero button, .hero a[style*="border"] {
+  section.hero a,
+  section.hero button {
     font-size: 16px !important;
     padding: 10px 14px !important;
   }
 
   /* About Section */
-  .about-me {
+  section.about-me {
     margin-top: 60px !important;
     padding: 0 20px !important;
     flex-direction: column !important;
-    gap: 30px;
+    gap: 30px !important;
   }
 
-  .about-me h2 {
+  section.about-me h2 {
     font-size: 32px !important;
-    text-align: center;
+    text-align: center !important;
   }
 
-  .about-me img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+  section.about-me img {
+    width: 100% !important;
+    max-width: 400px !important;
+    height: auto !important;
   }
 
   .about-text {
     font-size: 16px !important;
     line-height: 1.6 !important;
+    text-align: center !important;
+  }
+
+  section.about-me > div {
+    align-items: center !important;
   }
 
   /* Picture Grid */
@@ -244,8 +254,8 @@ nav ul li a:hover {
 
   /* Posts Grid */
   .posts-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
 
   /* Featured Posts Section */
@@ -257,92 +267,119 @@ nav ul li a:hover {
     font-size: 32px !important;
   }
 
-  /* Section Headings */
-  h2[style*="font-size: 40px"] {
-    font-size: 32px !important;
-  }
-
-  h2[style*="font-size: 100px"] {
+  /* All Section Headings */
+  section h1 {
     font-size: 48px !important;
   }
 
-  /* Sections */
+  section h2 {
+    font-size: 32px !important;
+  }
+
+  /* General Sections */
   section {
     padding: 30px 20px !important;
     margin: 60px 0 !important;
   }
 
-  section[style*="margin: 120px"] {
-    margin: 60px 0 !important;
-  }
-
-  /* Anticipate Section */
-  section div[style*="justify-content: space-between"] {
+  /* Anticipate Section - Image and Text */
+  section > div {
     flex-direction: column !important;
-    gap: 30px;
+    gap: 30px !important;
+    align-items: center !important;
   }
 
-  section div img[style*="height: 588px"] {
+  section img {
     height: auto !important;
-    max-width: 100%;
+    max-width: 100% !important;
+    width: 100% !important;
   }
 
   /* Contact Section */
-  .contact {
+  section.contact {
     padding: 40px 20px 16px 20px !important;
     gap: 30px !important;
   }
 
-  .contact p {
+  section.contact p {
     font-size: 16px !important;
     line-height: 1.6 !important;
   }
 
-  .contact ul {
+  section.contact ul {
     flex-direction: column !important;
     gap: 16px !important;
-    align-items: center;
+    align-items: center !important;
   }
 
-  .contact div[style*="justify-content: space-between"] {
+  section.contact > div:last-child {
     flex-direction: column !important;
-    gap: 24px;
-    text-align: center;
+    gap: 24px !important;
+    text-align: center !important;
   }
 
-  .contact div[style*="justify-content: space-between"] ul {
+  section.contact > div:last-child ul {
     flex-direction: row !important;
-    gap: 2rem !important;
+    gap: 1.5rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  section.contact > div:last-child p {
+    font-size: 14px !important;
+  }
+
+  /* Buttons/Links that look like buttons */
+  section a[style*="border"],
+  section button {
+    font-size: 16px !important;
+    padding: 10px 14px !important;
   }
 }
 
 /* Small Mobile (up to 480px) */
 @media (max-width: 480px) {
-  .hero h1 {
+  /* Hero */
+  section.hero h1 {
     font-size: 28px !important;
   }
 
-  .about-me h2,
-  .featured-posts h2,
-  h2[style*="font-size: 40px"],
-  h2[style*="font-size: 32px"] {
-    font-size: 28px !important;
-  }
-
-  h2[style*="font-size: 100px"] {
+  /* Section Headings */
+  section h1 {
     font-size: 36px !important;
   }
 
-  nav ul {
+  section h2 {
+    font-size: 24px !important;
+  }
+
+  .about-me h2,
+  .featured-posts h2 {
+    font-size: 24px !important;
+  }
+
+  /* Navigation */
+  header nav ul {
     gap: 1rem !important;
     font-size: 14px !important;
   }
 
+  /* Post Cards */
   .post-card h3 {
     font-size: 20px !important;
   }
 
-  .contact ul {
+  /* Contact */
+  section.contact ul {
     gap: 12px !important;
+  }
+
+  section.contact > div:last-child ul {
+    gap: 1rem !important;
+    font-size: 14px !important;
+  }
+
+  /* About text */
+  .about-text {
+    font-size: 14px !important;
   }
 }
