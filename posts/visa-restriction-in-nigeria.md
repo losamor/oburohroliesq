@@ -5,6 +5,7 @@ image: "/images/is-the-west.jpeg"
 read_time: "12 min read"
 excerpt: "When the world's most powerful nations decide who can enter..."
 ---
+
 ## Introduction
 The latest travel restrictions—such as the US travel bans expanded in December 2025, the UK's ETA enforcement starting 2026, and ETIAS coming to Europe—raise a provocative question: Why are citizens of countries like Nigeria, Venezuela, or Afghanistan suddenly facing stricter barriers while others are not? Is this about security, or something deeper, about maintaining global dominance and fostering economic dependence?
 
@@ -41,5 +42,6 @@ How can international law protect nations from this form of subtle imperialism?
 7. Schengen Borders Code, Regulation (EU) 2016/399
 8. UK Immigration Rules and ETA Requirements, 2023–2026
 9. US Immigration and Nationality Act, 1952, as amended through 2025
+
 
 
