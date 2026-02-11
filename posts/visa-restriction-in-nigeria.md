@@ -1,6 +1,6 @@
 ---
-title: Visa Restriction in Nigeria: Global Isolation, Economic Pressure, and Power Dynamics
-date: 2026-02-11 T20:49:59.798Z
+title: "Visa Restriction in Nigeria: Global Isolation, Economic Pressure, and Power Dynamics"
+date: "2026-02-11T20:49:59.798Z"
 image: /images/is-the-west.jpeg
 read_time: 12 min read
 excerpt: When the world's most powerful nations decide who can enter, who can work, and who can study abroad, what does it mean for developing countries like Nigeria?
@@ -45,4 +45,5 @@ How can international law protect nations from this form of subtle imperialism?
 7. Schengen Borders Code, Regulation (EU) 2016/399
 8. UK Immigration Rules and ETA Requirements, 2023–2026
 9. US Immigration and Nationality Act, 1952, as amended through 2025
+
 <!--EndFragment-->
