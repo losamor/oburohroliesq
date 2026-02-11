@@ -1,5 +1,5 @@
 ---
-title: Ifunanya Nwangene’s Death: A Mirror Reflecting Our Collective Failure
+title: "Ifunanya Nwangene’s Death: A Mirror Reflecting Our Collective Failure"
 date: 2026-02-11T20:49:59.798Z
 image: /images/aaron-burden-6jyoil2ghvk-unsplash.jpg
 read_time: 8 min read
@@ -69,6 +69,7 @@ Relevant Nigerian Legal Statutes & Constitutional Law
 1. Corporate Social Responsibility in Corporate Nigeria — Analysis of CSR regulation and enforcement gaps in Nigeria’s corporate law 
 2. Cambridge University Press & Assessment
 3. Assessment of National Health Act Knowledge Among Providers — Empirical insight into implementation gaps and professionals’ awareness 
+
 
 
 <!--EndFragment-->
