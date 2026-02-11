@@ -1,7 +1,7 @@
 ---
 title: Ifunanya Nwangene's Death - A Mirror Reflecting Our Collective Failure
 date: 2026-02-11T20:49:59.798Z
-image: /images/aaron-burden-6jyoil2ghvk-unsplash.jpg
+image: /images/private-investors.jpeg
 read_time: 8 min read
 excerpt: Ifunanya Nwangene's death is not evidence that Nigeria has failed — it is evidence that Nigerians as individuals have failed to take responsibility for societal advancement. This commentary explores how private sector apathy, cultural attitudes toward work, and individual complacency undermine progress more than government alone.
 ---
