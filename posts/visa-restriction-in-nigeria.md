@@ -1,9 +1,9 @@
 ---
-title: "Visa Restriction in Nigeria: Global Isolation, Economic Pressure, and Power Dynamics"
-date: "2026-02-11T20:49:59.798Z"
-image: "/images/is-the-west.jpeg"
-read_time: "12 min read"
-excerpt: "When the world's most powerful nations decide who can enter, who can work, and who can study abroad, what does it mean for developing countries like Nigeria?"
+title: Visa Restriction in Nigeria - Global Isolation and Power Dynamics
+date: 2026-02-11T20:49:59.798Z
+image: /images/is-the-west.jpeg
+read_time: 12 min read
+excerpt: When the world's most powerful nations decide who can enter, who can work, and who can study abroad, what does it mean for developing countries like Nigeria?
 ---
 
 ## Introduction
@@ -41,3 +41,4 @@ Isolation and dependence are not abstract; they affect trade, talent mobility, a
 7. Schengen Borders Code, Regulation (EU) 2016/399
 8. UK Immigration Rules and ETA Requirements, 2023–2026
 9. US Immigration and Nationality Act, 1952, as amended through 2025
+
