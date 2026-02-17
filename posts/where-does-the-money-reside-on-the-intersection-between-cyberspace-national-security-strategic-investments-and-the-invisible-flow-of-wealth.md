@@ -22,11 +22,7 @@ Capital is not in circulation. Capital is not hoarded. So where does the money r
 
 It’s a question that invites curiosity. We see wealth in the world of startups, tech unicorns, and billionaires—but some of the largest concentrations of economic power exist in spaces that are invisible to the everyday observer: in national security, strategic technology, and state-driven investment. This is where money, influence, and technology converge, shaping the future in ways most of us cannot see.
 
-<!--StartFragment-->
-
 <script async="async" data-cfasync="false" src="https://pl28683253.effectivegatecpm.com/466644c2d6989eeb6c995ae89168d12c/invoke.js"></script> <div id="container-466644c2d6989eeb6c995ae89168d12c"></div>
-
-<!--EndFragment-->
 
 1. The Legal and Regulatory Gap
 
