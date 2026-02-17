@@ -3,10 +3,19 @@ title: Ifunanya Nwangene's Death - A Mirror Reflecting Our Collective Failure
 date: 2026-02-11T20:49:59.798Z
 image: /images/private-investors.jpeg
 read_time: 8 min read
-excerpt: Ifunanya Nwangene's death is not evidence that Nigeria has failed — it is evidence that Nigerians as individuals have failed to take responsibility for societal advancement. This commentary explores how private sector apathy, cultural attitudes toward work, and individual complacency undermine progress more than government alone.
+excerpt: Ifunanya Nwangene's death is not evidence that Nigeria has failed — it
+  is evidence that Nigerians as individuals have failed to take responsibility
+  for societal advancement. This commentary explores how private sector apathy,
+  cultural attitudes toward work, and individual complacency undermine progress
+  more than government alone.
 ---
-
 Every time a tragedy strikes in this country, the chorus is almost automatic: "The government has failed us." "Nigeria is broken." "Nothing works here." Yet, if we pause for a moment and think carefully, is that truly the case? Or are we, as citizens, failing Nigeria ourselves?
+
+<!--StartFragment-->
+
+<script> atOptions = { 'key' : '52bb989defa217fd12f9e358eb0a2f55', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/52bb989defa217fd12f9e358eb0a2f55/invoke.js"></script>
+
+<!--EndFragment-->
 
 Consider the case of Ifunanya Nwangene. A young life, full of promise, cut short under circumstances that could have been mitigated. Many have blamed the state, the system, or the government. But pause and ask: who truly holds responsibility? Was it the presidency that should have stocked the hospital with lifesaving anti-venoms? Was it the government that directly controls every hospital's internal budget and decision-making? Or was it the private individuals who manage these institutions, make procurement decisions, and allocate resources?
 
@@ -23,6 +32,12 @@ From restaurants to corporate offices, every avenue is an opportunity to contrib
 ## The Digital Frontier and the Nigerian Disadvantage
 
 Today, the world's economy is evolving faster than ever. AI, social media, gaming platforms, and digital entrepreneurship have created avenues to generate wealth that simply did not exist twenty years ago. Yet, Nigeria remains largely unprepared to capitalize on these opportunities.
+
+<!--StartFragment-->
+
+<script> atOptions = { 'key' : 'c2c43241ed943052a8b9a147c93f5d1f', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/c2c43241ed943052a8b9a147c93f5d1f/invoke.js"></script>
+
+<!--EndFragment-->
 
 Take online platforms, for instance. In the United States, someone can earn hundreds of dollars playing games, testing apps, or creating content online. AI tools can amplify productivity, streamline processes, and unlock new income streams. In Nigeria, these same opportunities exist but are largely inaccessible due to structural barriers: expensive data, limited platform reach, slow internet, and restricted access to digital ecosystems. Even when opportunities appear, Nigerians often encounter systemic hurdles that the Western private sector has long eliminated for its citizens.
 
