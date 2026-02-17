@@ -20,9 +20,7 @@ excerpt: >-
 
 Capital is not in circulation. Capital is not hoarded. So where does the money reside?
 
-It’s a question that invites curiosity. We see wealth in the world of startups, tech unicorns, and billionaires—but some of the largest concentrations of economic power exist in spaces that are invisible to the everyday observer: in national security, strategic technology, and state-driven investment. This is where money, influence, and technology converge, shaping the future in ways most of us cannot see.
-
-<script async="async" data-cfasync="false" src="https://pl28683253.effectivegatecpm.com/466644c2d6989eeb6c995ae89168d12c/invoke.js"></script> <div id="container-466644c2d6989eeb6c995ae89168d12c"></div>
+It’s a question that invites curiosity. We see wealth in the world of startups, tech unicorns, and billionaires—but some of the largest concentrations of economic power exist in spaces that are invisible to the everyday observer: in national security, strategic technology, and state-driven investment. This is where money, influence, and technology converge, shaping the future in ways most of us cannot see.<script async="async" data-cfasync="false" src="https://pl28683253.effectivegatecpm.com/466644c2d6989eeb6c995ae89168d12c/invoke.js"></script> <div id="container-466644c2d6989eeb6c995ae89168d12c"></div>
 
 1. The Legal and Regulatory Gap
 
@@ -50,13 +48,7 @@ These investments create assets that are locked in, non-liquid, and globally con
 
 Money flows not through retail markets but through long-term contracts, research grants, and national programs, making it largely invisible in conventional economic analysis.
 
-Think of advanced nuclear centrifuges, satellite constellations, and autonomous defense systems. Each is costly, highly specialized, and contributes more to national influence than to cash flow in a market sense.
-
-<!--StartFragment-->
-
-<script> atOptions = { 'key' : 'a6e30625616fbcc561b1636ffe832dfe', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/a6e30625616fbcc561b1636ffe832dfe/invoke.js"></script>
-
-<!--EndFragment-->
+Think of advanced nuclear centrifuges, satellite constellations, and autonomous defense systems. Each is costly, highly specialized, and contributes more to national influence than to cash flow in a market sense.<script> atOptions = { 'key' : 'a6e30625616fbcc561b1636ffe832dfe', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/a6e30625616fbcc561b1636ffe832dfe/invoke.js"></script>
 
 3. International Frameworks and Emerging Norms
 
@@ -94,11 +86,7 @@ Regulatory gaps create exposure to cyber threats, AI misuse, and technological d
 
 Developing nations can either remain observers of this invisible wealth or strategically build the frameworks necessary to integrate these technologies and investments into their economic and governance systems.
 
-<!--StartFragment-->
-
 <script> atOptions = { 'key' : 'd6e1b64242a10e67e7ba7e6c1b4be5ca', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/d6e1b64242a10e67e7ba7e6c1b4be5ca/invoke.js"></script>
-
-<!--EndFragment-->
 
 6. The Invisible Flow of Wealth
 
