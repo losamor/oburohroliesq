@@ -16,10 +16,6 @@ The latest travel restrictions—such as the US travel bans expanded in December
 
 Consider the impact of visa bans on talent mobility. Citizens from isolated nations cannot freely study, work, or innovate abroad. This ensures that developing countries remain dependent on the West economically: Nigeria continues to export oil, minerals, and labor while receiving monetary compensation that circulates inadequately in a heavily indebted economy. The West gains resources and maintains influence, while the human capital of these nations is deliberately constrained.
 
-
-
-<script> atOptions = { 'key' : 'a6a2666d9f21ea090af7ee2e611d0ead', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/a6a2666d9f21ea090af7ee2e611d0ead/invoke.js"></script>
-
 Nations like Venezuela experienced similar patterns: international isolation preceded heightened political and economic instability, eventually escalating into internal conflict and international intervention. This is not coincidental.
 
 ## Isolation as a Prelude to Conflict
