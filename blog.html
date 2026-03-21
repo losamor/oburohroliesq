@@ -33,60 +33,8 @@
         <div class="section-header">
             <h2 class="section-title">Featured Posts</h2>
         </div>
-        <div class="posts-grid">
-            <!-- Featured Post 1 -->
-            <article class="post-card featured">
-                <img src="images/iklas-WpFZu1CGBNc-unsplash.jpg" alt="Featured post image">
-                <div class="post-content">
-                    <span class="post-tag">Featured</span>
-                    <h3>My Journey as an Author</h3>
-                    <p class="post-excerpt">Discover how I published 19 books across 36,000 resellers worldwide...</p>
-                    <div class="post-meta">
-                        <span class="date">January 15, 2026</span>
-                        <span class="read-time">5 min read</span>
-                    </div>
-                    <a href="posts/my-journey.html" class="read-more">
-                        Read More 
-                        <span class="material-symbols-outlined">east</span>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Featured Post 2 -->
-            <article class="post-card featured">
-                <img src="images/iklas-WpFZu1CGBNc-unsplash.jpg" alt="Featured post image">
-                <div class="post-content">
-                    <span class="post-tag">Featured</span>
-                    <h3>Legal Practice in Nigeria</h3>
-                    <p class="post-excerpt">Insights from years of legal practice and what aspiring lawyers should know...</p>
-                    <div class="post-meta">
-                        <span class="date">January 10, 2026</span>
-                        <span class="read-time">7 min read</span>
-                    </div>
-                    <a href="posts/legal-practice.html" class="read-more">
-                        Read More 
-                        <span class="material-symbols-outlined">east</span>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Featured Post 3 -->
-            <article class="post-card featured">
-                <img src="images/iklas-WpFZu1CGBNc-unsplash.jpg" alt="Featured post image">
-                <div class="post-content">
-                    <span class="post-tag">Featured</span>
-                    <h3>Writing for Education</h3>
-                    <p class="post-excerpt">How my books became approved by the Ministry of Education...</p>
-                    <div class="post-meta">
-                        <span class="date">December 28, 2025</span>
-                        <span class="read-time">6 min read</span>
-                    </div>
-                    <a href="posts/writing-education.html" class="read-more">
-                        Read More 
-                        <span class="material-symbols-outlined">east</span>
-                    </a>
-                </div>
-            </article>
+        <div class="posts-grid" id="featured-posts">
+            <div class="loading">Loading posts...</div>
         </div>
     </section>
 
@@ -114,7 +62,7 @@
                 <li><a href="https://youtube.com/@rolioburohesq?si=kaZKsWVXUnhFWCAo" target="_blank">YouTube</a></li>
                 <li><a href="https://x.com/RoliKimOburoh?t=WBztLPQNu8M1DOZpxY1r7Q&s=09" target="_blank">X (formerly Twitter)</a></li>
                 <li><a href="https://www.instagram.com/tesigiwa?igsh=MTdjc3VhZnd2Z2Y4YQ==" target="_blank">Instagram</a></li>
-                <li><a href="mailto:oburohroli94@gmail.com">Email</a></li>
+                <li><a href="/cdn-cgi/l/email-protection#523d3027203d3a203d3e3b6b6612353f333b3e7c313d3f">Email</a></li>
             </ul>
         </div>
         <div class="footer">
@@ -127,7 +75,7 @@
         </div>
     </section>
 
-    <script type="module">
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
         import { getDatabase, ref, get } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
 
@@ -216,22 +164,22 @@
                 const validPosts = posts.filter(p => p !== null);
                 validPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
                 
-                const container = document.getElementById('netlify-posts');
-                container.innerHTML = '';
-                
-                for (const post of validPosts) {
-                    const viewCount = await window.getViewCount(post.slug);
-                    const likeCount = await window.getLikeCount(post.slug);
+                const featuredContainer = document.getElementById('featured-posts');
+                const latestContainer = document.getElementById('netlify-posts');
+                featuredContainer.innerHTML = '';
+                latestContainer.innerHTML = '';
+
+                function createArticle(post, viewCount, likeCount, isFeatured) {
                     const dateObj = new Date(post.date);
                     const formattedDate = dateObj.toLocaleDateString('en-US', { 
                         year: 'numeric', month: 'long', day: 'numeric' 
                     });
-                    
                     const article = document.createElement('article');
-                    article.className = 'post-card';
+                    article.className = isFeatured ? 'post-card featured' : 'post-card';
                     article.innerHTML = `
                         <img src="${post.image}" alt="${post.title}">
                         <div class="post-content">
+                            ${isFeatured ? '<span class="post-tag">Featured</span>' : ''}
                             <h3>${post.title}</h3>
                             <p class="post-excerpt">${post.body}</p>
                             <div class="post-meta">
@@ -244,21 +192,22 @@
                             </a>
                         </div>
                     `;
-                    container.appendChild(article);
+                    return article;
+                }
+
+                for (let i = 0; i < validPosts.length; i++) {
+                    const post = validPosts[i];
+                    const viewCount = await window.getViewCount(post.slug);
+                    const likeCount = await window.getLikeCount(post.slug);
+
+                    if (i < 3) {
+                        featuredContainer.appendChild(createArticle(post, viewCount, likeCount, true));
+                    }
+                    latestContainer.appendChild(createArticle(post, viewCount, likeCount, false));
                 }
             } catch (error) {
                 console.error('Error loading posts:', error);
+                document.getElementById('featured-posts').innerHTML = 
+                    '<p class="error-message">Unable to load posts.</p>';
                 document.getElementById('netlify-posts').innerHTML = 
                     '<p class="error-message">Unable to load posts.</p>';
-            }
-        }
-        
-        loadNetlifyPosts();
-    </script>
-</body>
-</html>
-
-
-
-
-
