@@ -33,8 +33,60 @@
         <div class="section-header">
             <h2 class="section-title">Featured Posts</h2>
         </div>
-        <div class="posts-grid" id="featured-posts">
-            <div class="loading">Loading posts...</div>
+        <div class="posts-grid">
+            <!-- Featured Post 1 -->
+            <article class="post-card featured">
+                <img src="images/governance-struc.jpeg" alt="Featured post image">
+                <div class="post-content">
+                    <span class="post-tag">Featured</span>
+                    <h3>Governance, Structure, and the Nigerian State: A Case for Strategic Leadership in 2027</h3>
+                    <p class="post-excerpt">Governance is one of the most misunderstood concepts in modern political discourse, particularly within developing states such as Nigeria. </p>
+                    <div class="post-meta">
+                        <span class="date">March 21, 2026</span>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <a href="posts/governance-structure-nigerian-state.html" class="read-more">
+                        Read More 
+                        <span class="material-symbols-outlined">east</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Featured Post 2 -->
+            <article class="post-card featured">
+                <img src="images/christabel-omoremime-buroh.jpeg" alt="Featured post image">
+                <div class="post-content">
+                    <span class="post-tag">Featured</span>
+                    <h3>Christabel Omoremime Buroh: A Reflection on Sexual Harassment, Silence, and Institutional Failure in Nigeria</h3>
+                    <p class="post-excerpt">Christabel was a 300-level university student — intelligent, vibrant, and full of promise. She had aspirations, friendships, and a future she was actively building.</p>
+                    <div class="post-meta">
+                        <span class="date">March 22, 2026</span>
+                        <span class="read-time">7 min read</span>
+                    </div>
+                    <a href="posts/christabel-omoremime-buroh-sexual-harassment-nigeria.html" class="read-more">
+                        Read More 
+                        <span class="material-symbols-outlined">east</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Featured Post 3 -->
+            <article class="post-card featured">
+                <img src="images/world-war-three-closer.jpeg" alt="Featured post image">
+                <div class="post-content">
+                    <span class="post-tag">Featured</span>
+                    <h3>The Edge of the Abyss: War, Memory, and the Dangerous Allure of "World War III"</h3>
+                    <p class="post-excerpt">On October 7, 2023, militants from Hamas crossed into southern Israel, killing civilians and taking hostages. Within hours, the Israeli government under Prime Minister Benjamin Netanyahu declared war.</p>
+                    <div class="post-meta">
+                        <span class="date">March 20, 2026</span>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                    <a href="posts/the-edge-of-the-abyss.html" class="read-more">
+                        Read More 
+                        <span class="material-symbols-outlined">east</span>
+                    </a>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -62,7 +114,7 @@
                 <li><a href="https://youtube.com/@rolioburohesq?si=kaZKsWVXUnhFWCAo" target="_blank">YouTube</a></li>
                 <li><a href="https://x.com/RoliKimOburoh?t=WBztLPQNu8M1DOZpxY1r7Q&s=09" target="_blank">X (formerly Twitter)</a></li>
                 <li><a href="https://www.instagram.com/tesigiwa?igsh=MTdjc3VhZnd2Z2Y4YQ==" target="_blank">Instagram</a></li>
-                <li><a href="/cdn-cgi/l/email-protection#523d3027203d3a203d3e3b6b6612353f333b3e7c313d3f">Email</a></li>
+                <li><a href="mailto:oburohroli94@gmail.com">Email</a></li>
             </ul>
         </div>
         <div class="footer">
@@ -75,7 +127,7 @@
         </div>
     </section>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module">
+    <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
         import { getDatabase, ref, get } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
 
@@ -164,22 +216,22 @@
                 const validPosts = posts.filter(p => p !== null);
                 validPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
                 
-                const featuredContainer = document.getElementById('featured-posts');
-                const latestContainer = document.getElementById('netlify-posts');
-                featuredContainer.innerHTML = '';
-                latestContainer.innerHTML = '';
-
-                function createArticle(post, viewCount, likeCount, isFeatured) {
+                const container = document.getElementById('netlify-posts');
+                container.innerHTML = '';
+                
+                for (const post of validPosts) {
+                    const viewCount = await window.getViewCount(post.slug);
+                    const likeCount = await window.getLikeCount(post.slug);
                     const dateObj = new Date(post.date);
                     const formattedDate = dateObj.toLocaleDateString('en-US', { 
                         year: 'numeric', month: 'long', day: 'numeric' 
                     });
+                    
                     const article = document.createElement('article');
-                    article.className = isFeatured ? 'post-card featured' : 'post-card';
+                    article.className = 'post-card';
                     article.innerHTML = `
                         <img src="${post.image}" alt="${post.title}">
                         <div class="post-content">
-                            ${isFeatured ? '<span class="post-tag">Featured</span>' : ''}
                             <h3>${post.title}</h3>
                             <p class="post-excerpt">${post.body}</p>
                             <div class="post-meta">
@@ -192,22 +244,21 @@
                             </a>
                         </div>
                     `;
-                    return article;
-                }
-
-                for (let i = 0; i < validPosts.length; i++) {
-                    const post = validPosts[i];
-                    const viewCount = await window.getViewCount(post.slug);
-                    const likeCount = await window.getLikeCount(post.slug);
-
-                    if (i < 3) {
-                        featuredContainer.appendChild(createArticle(post, viewCount, likeCount, true));
-                    }
-                    latestContainer.appendChild(createArticle(post, viewCount, likeCount, false));
+                    container.appendChild(article);
                 }
             } catch (error) {
                 console.error('Error loading posts:', error);
-                document.getElementById('featured-posts').innerHTML = 
-                    '<p class="error-message">Unable to load posts.</p>';
                 document.getElementById('netlify-posts').innerHTML = 
                     '<p class="error-message">Unable to load posts.</p>';
+            }
+        }
+        
+        loadNetlifyPosts();
+    </script>
+</body>
+</html>
+
+
+
+
+
