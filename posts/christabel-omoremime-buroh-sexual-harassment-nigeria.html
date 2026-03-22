@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Black+Han+Sans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Pixelify+Sans:wght@400..700&family=Questrial&family=Racing+Sans+One&family=Smooch+Sans:wght@100..900&family=Vina+Sans&display=swap" rel="stylesheet">
+    <title>Christabel Omoremime Buroh | Oburoh Roli ESQ</title>
+    <style>
+        body {
+            background-color: #FFD4E3;
+            font-family: "DM Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .post-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            background-color: #FFC5D9;
+            min-height: 100vh;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 32px;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 0.7;
+        }
+
+        .post-header {
+            margin-bottom: 32px;
+        }
+
+        .post-title {
+            font-family: 'Questrial', sans-serif;
+            font-size: 48px;
+            line-height: 1.2;
+            margin: 0 0 16px 0;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 24px;
+            color: #666;
+            font-size: 16px;
+            align-items: center;
+        }
+
+        .post-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .post-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 32px;
+        }
+
+        .post-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .post-content p {
+            margin-bottom: 24px;
+        }
+
+        .post-content h2 {
+            font-family: 'Questrial', sans-serif;
+            font-size: 32px;
+            margin: 40px 0 16px 0;
+        }
+
+        .post-content h3 {
+            font-family: 'Questrial', sans-serif;
+            font-size: 24px;
+            margin: 32px 0 12px 0;
+        }
+
+        .post-content ul {
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+
+        .post-content ul li {
+            margin-bottom: 8px;
+        }
+
+        .post-content ol {
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+
+        .post-content ol li {
+            margin-bottom: 8px;
+        }
+
+        .post-content hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 40px 0;
+        }
+
+        .post-engagement {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .like-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            border: 2px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .like-button:hover {
+            border-color: #ff6b6b;
+            background: #fff5f5;
+        }
+
+        .like-button.liked {
+            background: #ff6b6b;
+            border-color: #ff6b6b;
+            color: white;
+        }
+
+        .like-button:active {
+            transform: scale(0.95);
+        }
+
+        .like-icon {
+            font-size: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .post-container {
+                padding: 40px 20px;
+            }
+
+            .post-title {
+                font-size: 32px;
+            }
+
+            .post-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .post-image {
+                height: 250px;
+            }
+        }
+    </style>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+    <header>
+        <nav style="display: flex; justify-content: space-between; align-items: center; padding: 22px 100px; box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.8);">
+            <a href="index.html" style="font-size: 20px; font-family: 'Questrial', sans-serif;">oburohroli</a>
+            <ul style="display: flex; list-style: none; gap: 4rem; padding: 0; margin: 0; font-size: 20px;">
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="post-container" id="post-container">
+        <a href="blog.html" class="back-link">
+            <span class="material-symbols-outlined">arrow_back</span>
+            Back to Blog
+        </a>
+
+        <article>
+            <div class="post-header">
+                <h1 class="post-title">Christabel Omoremime Buroh: A Reflection on Sexual Harassment, Silence, and Institutional Failure in Nigeria</h1>
+                <div class="post-meta">
+                    <div class="post-meta-item">
+                        <span class="material-symbols-outlined">calendar_today</span>
+                        March 22, 2026
+                    </div>
+                    <div class="post-meta-item">
+                        <span class="material-symbols-outlined">visibility</span>
+                        <span id="view-count">0</span> views
+                    </div>
+                </div>
+            </div>
+
+            <img src="/images/christabel-omoremime-buroh.jpeg" alt="Christabel Omoremime Buroh: A Reflection on Sexual Harassment, Silence, and Institutional Failure in Nigeria" class="post-image">
+
+            <div class="post-content">
+
+                <h2>The Suffering of Rape Survivors in Nigeria</h2>
+
+                <p>Christabel was a 300-level university student — intelligent, vibrant, and full of promise. She had aspirations, friendships, and a future she was actively building. Like many young women in Nigerian universities, she navigated academic pressures alongside social and religious communities that shaped campus life. What she did not anticipate was that the very spaces meant to provide safety and belonging would become the source of her suffering.</p>
+
+                <p>She experienced sexual harassment within a familiar social circle. It was not an attack by a stranger in isolation; it occurred within the context of trust. Research consistently shows that sexual violations are frequently perpetrated by acquaintances rather than strangers. The betrayal of trust intensifies trauma because survivors must grapple not only with the violation itself but also with the collapse of safety in their everyday environment.</p>
+
+                <p>After confiding in someone she trusted, her private disclosure became public gossip. Her experience was distorted, discussed, and subtly weaponized against her. Instead of protection and validation, she encountered humiliation. This phenomenon, known as <strong>secondary victimization</strong>, occurs when survivors are blamed, mocked, disbelieved, or socially punished after disclosure. Studies indicate that secondary victimization significantly worsens psychological outcomes and discourages future reporting.</p>
+
+                <p>Within her university environment, a powerful religious fellowship operated as both spiritual authority and social network. Rather than serving as refuge, it became a site of pressure. She reportedly endured moral scrutiny and intense religious expectations framed as correction or spiritual discipline. In environments where faith-based authority overlaps with peer hierarchy, religious rhetoric can unintentionally silence victims. The emphasis shifts from accountability for harm to preserving group image.</p>
+
+                <p>Compounding this dynamic, some members of that religious sect were also affiliated with a more secular, socially dominant circle on campus — a circular sect with its own hierarchy and influence. The overlap between religious authority and social power created a climate in which challenging misconduct risked social exile. When power structures intersect, victims often face collective intimidation rather than isolated opposition.</p>
+
+                <p>Over time, the psychological effects became visible. She withdrew from gatherings and avoided spaces where those involved might be present. She isolated herself, locking herself indoors while others socialized. She developed anxiety responses — fear, shaking, emotional shutdown — at the possibility of encountering them. These are consistent with trauma responses documented in survivors of sexual harassment and assault, including anxiety disorders, depression, hypervigilance, and social withdrawal.</p>
+
+                <p>The suffering of rape and sexual harassment survivors extends far beyond the initial act. It often includes:</p>
+
+                <ul>
+                    <li>Loss of trust in friendships and authority figures</li>
+                    <li>Social ostracization and reputational damage</li>
+                    <li>Academic decline due to psychological distress</li>
+                    <li>Religious guilt or spiritual confusion when faith spaces are implicated</li>
+                    <li>Fear of retaliation or blacklisting</li>
+                    <li>Long-term mental health struggles, including suicidal ideation</li>
+                </ul>
+
+                <p>In this case, isolation deepened. Subtle warnings to remain quiet reportedly circulated. Meanwhile, public advocacy against harassment continued in abstract discussions, highlighting the gap between rhetoric and lived reality. This contradiction can intensify trauma, as survivors observe public condemnation of misconduct alongside private minimization of their own experiences.</p>
+
+                <p>Eventually, she took her own life.</p>
+
+                <p>Following her death, simplified narratives emerged. Complex experiences were reduced to interpersonal jealousy or emotional instability. This reframing reflects a broader social pattern in which institutions unconsciously protect themselves by attributing tragedy to personal weakness rather than systemic failure. Such narrative manipulation erases structural accountability.</p>
+
+                <p>Disturbingly, similar patterns reportedly resurfaced three years later within the same broader social networks, particularly among individuals connected to the more secular circle. While details may vary, the recurrence of humiliation, silence, and tragedy suggests structural problems rather than isolated incidents.</p>
+
+                <p>This account reflects a larger crisis. According to global research by the World Health Organization, sexual violence has profound and lasting mental health consequences, including depression, post-traumatic stress disorder, and suicidal behavior. The UN Women further emphasizes that victim-blaming and social stigma significantly deter reporting and compound harm.</p>
+
+                <p>In Nigeria, legal frameworks such as the <strong>Violence Against Persons (Prohibition) Act (2015)</strong> were designed to address sexual and gender-based violence. However, legislation alone cannot dismantle entrenched cultural attitudes. When institutions prioritize reputation over justice, when confidentiality is breached, and when survivors fear retaliation more than they trust reporting systems, legal protections lose practical effectiveness.</p>
+
+                <p>There is no sympathetic justification for sexual violence. Personal grief, stress, or hardship cannot excuse the decision to violate another person. Sexual harm is a deliberate act. Protecting perpetrators through silence, intimidation, or narrative manipulation perpetuates impunity.</p>
+
+                <p>Universities must move beyond symbolic condemnation and implement concrete safeguards: confidential reporting channels, independent investigative panels, trauma-informed counseling services, and explicit anti-retaliation protections. Religious and social organizations must critically examine how authority and image management may silence victims. Advocacy must be matched by accountability.</p>
+
+                <p>The story of someone I know is not merely personal. It illustrates the compounded suffering many survivors endure — first through violation, then through blame, then through isolation. Until institutions confront both sexual misconduct and the culture that protects it, this cycle will persist.</p>
+
+                <p>The cost will continue to be measured in broken trust, damaged futures, and lives that end long before they should.</p>
+
+                <hr>
+
+                <h3>References</h3>
+
+                <ol>
+                    <li>World Health Organization (WHO). (2021). <em>Violence against women prevalence estimates, 2018.</em></li>
+                    <li>UN Women. (2020). <em>Ending violence against women and girls: Global norms and standards.</em></li>
+                    <li>Federal Republic of Nigeria. (2015). <em>Violence Against Persons (Prohibition) Act.</em></li>
+                    <li>Campbell, R. (2008). The psychological impact of rape victims' experiences with the legal, medical, and mental health systems. <em>American Psychologist, 63</em>(8), 702–717.</li>
+                    <li>Ullman, S. E. (2010). <em>Talking about sexual assault: Society's response to survivors.</em> American Psychological Association.</li>
+                </ol>
+
+            </div>
+
+            <div class="post-engagement">
+                <button class="like-button" id="like-button" onclick="handleLikeClick()">
+                    <span class="like-icon">🤍</span>
+                    <span class="like-count" id="like-count">0</span>
+                </button>
+            </div>
+        </article>
+    </div>
+
+    <section class="contact" id="contact" style="display: flex; flex-direction: column; padding: 48px 100px 16px 100px; background-color: #FFEDED; gap: 48px;">
+        <div style="padding: 0; margin: 0;">
+            <h2 style="font-family: Questrial, sans-serif; font-size: 40px; text-align: center;">Contact Me</h2>
+        </div>
+        <div>
+            <p style="text-align: center; font-size: 20px; line-height: 28px;">
+                Want to keep in touch with me? You can follow me on my social platforms or reach out directly. Whether you have questions about my work, want to discuss potential collaborations, or just want to say hello, feel free to connect with me.
+            </p>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://youtube.com/@rolioburohesq?si=kaZKsWVXUnhFWCAo" target="_blank">YouTube</a></li>
+                <li><a href="https://x.com/RoliKimOburoh?t=WBztLPQNu8M1DOZpxY1r7Q&s=09" target="_blank">X (formerly Twitter)</a></li>
+                <li><a href="https://www.instagram.com/tesigiwa?igsh=MTdjc3VhZnd2Z2Y4YQ==" target="_blank">Instagram</a></li>
+                <li><a href="/cdn-cgi/l/email-protection#65060a0b11040611250a0710170a0d170a090c4b060a08">Email</a></li>
+            </ul>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <p style="font-size: 16px;">© 2026 Oburoh Roli ESQ. All rights reserved.</p>
+            <ul style="display: flex; list-style: none; gap: 4rem; padding: 0; margin: 0; font-size: 16px;">
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getDatabase, ref, get, runTransaction } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDtgnUntN-duJcWNMEw_fQY35WfUi7KQho",
+            authDomain: "oburohroliesq.firebaseapp.com",
+            databaseURL: "https://oburohroliesq-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "oburohroliesq",
+            storageBucket: "oburohroliesq.firebasestorage.app",
+            messagingSenderId: "34953233103",
+            appId: "1:34953233103:web:c7aff419ffbf18e6fcadba",
+            measurementId: "G-X8ZFN95W7J"
+        };
+
+        const POST_SLUG = 'christabel-omoremime-buroh-sexual-harassment-nigeria';
+
+        let firebaseInitialized = false;
+        let database = null;
+
+        try {
+            const app = initializeApp(firebaseConfig);
+            database = getDatabase(app);
+            firebaseInitialized = true;
+        } catch (error) {
+            console.error('Firebase initialization error:', error);
+        }
+
+        async function getViewCount() {
+            if (!firebaseInitialized) return 0;
+            const viewRef = ref(database, 'views/' + POST_SLUG);
+            try {
+                const snapshot = await get(viewRef);
+                return snapshot.val() || 0;
+            } catch (error) {
+                return 0;
+            }
+        }
+
+        async function incrementViewCount() {
+            if (!firebaseInitialized) return;
+            const viewRef = ref(database, 'views/' + POST_SLUG);
+            try {
+                await runTransaction(viewRef, (currentValue) => (currentValue || 0) + 1);
+            } catch (error) {
+                console.error('Error incrementing view count:', error);
+            }
+        }
+
+        async function getLikeCount() {
+            if (!firebaseInitialized) return 0;
+            const likeRef = ref(database, 'likes/' + POST_SLUG);
+            try {
+                const snapshot = await get(likeRef);
+                return snapshot.val() || 0;
+            } catch (error) {
+                return 0;
+            }
+        }
+
+        async function toggleLike() {
+            if (!firebaseInitialized) return null;
+            const likeRef = ref(database, 'likes/' + POST_SLUG);
+            const userLikedKey = 'liked_' + POST_SLUG;
+            const hasLiked = localStorage.getItem(userLikedKey) === 'true';
+
+            try {
+                const result = await runTransaction(likeRef, (currentValue) => {
+                    const current = currentValue || 0;
+                    return hasLiked ? Math.max(0, current - 1) : current + 1;
+                });
+                const newCount = result.snapshot.val() || 0;
+                localStorage.setItem(userLikedKey, !hasLiked);
+                return { liked: !hasLiked, count: newCount };
+            } catch (error) {
+                console.error('Error toggling like:', error);
+                return null;
+            }
+        }
+
+        function hasUserLiked() {
+            return localStorage.getItem('liked_' + POST_SLUG) === 'true';
+        }
+
+        async function handleLikeClick() {
+            const button = document.getElementById('like-button');
+            button.disabled = true;
+            const result = await toggleLike();
+            if (result) {
+                if (result.liked) {
+                    button.classList.add('liked');
+                    button.querySelector('.like-icon').textContent = '❤️';
+                } else {
+                    button.classList.remove('liked');
+                    button.querySelector('.like-icon').textContent = '🤍';
+                }
+                button.querySelector('.like-count').textContent = result.count;
+            }
+            button.disabled = false;
+        }
+
+        window.handleLikeClick = handleLikeClick;
+
+        async function init() {
+            await incrementViewCount();
+            const viewCount = await getViewCount();
+            const likeCount = await getLikeCount();
+            const userLiked = hasUserLiked();
+
+            document.getElementById('view-count').textContent = viewCount;
+            document.getElementById('like-count').textContent = likeCount;
+
+            const likeButton = document.getElementById('like-button');
+            if (userLiked) {
+                likeButton.classList.add('liked');
+                likeButton.querySelector('.like-icon').textContent = '❤️';
+            }
+        }
+
+        init();
+    </script>
+
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+     
