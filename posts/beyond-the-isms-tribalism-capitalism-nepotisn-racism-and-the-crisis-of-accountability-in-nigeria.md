@@ -9,6 +9,14 @@ read_time: 5 min read
 
 <!--StartFragment-->
 
+<script async src="[https://pagead2.​googlesyndication.com/pagead/​js/adsbygoogle.js?client=ca-​pub-1190969263487856](https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1190969263487856)"
+
+     crossorigin="anonymous"></​script>
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
 Beyond the “Isms”: Tribalism, Capitalism, Nepotism, Racism, and the Crisis of Accountability in Nigeria
 
 Nigeria, like much of the modern world, is trapped in arguments about “isms.” Nepotism. Capitalism. Tribalism. Racism. These words are thrown around in outrage, often without discipline or reflection. They have become emotional weapons rather than analytical tools. Yet if Nigeria is to move forward, it must examine these concepts seriously—without sentimentality, without denial, and without selective outrage.
@@ -126,3 +134,5 @@ The problem is misunderstanding which ones truly govern us—and failing to conf
 1. Achebe, C. (2012). There Was a Country: A Personal History of Biafra. Penguin Press.
 
 2. Ake, C. (1981). A Political Economy of Africa. Longman.
+
+<!--EndFragment-->
